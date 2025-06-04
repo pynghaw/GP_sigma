@@ -19,7 +19,7 @@ from PySide6.QtWidgets import (QApplication, QHBoxLayout, QHeaderView, QLabel,
     QLineEdit, QPushButton, QSizePolicy, QTableWidget,
     QTableWidgetItem, QVBoxLayout, QWidget)
 
-class Ui_Form(object):
+class Ui_SetupTopupForm(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
