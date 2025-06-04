@@ -19,7 +19,7 @@ from PySide6.QtWidgets import (QApplication, QDateEdit, QHBoxLayout, QHeaderView
     QLabel, QLineEdit, QPushButton, QSizePolicy,
     QTableWidget, QTableWidgetItem, QWidget)
 
-class Ui_foam(object):
+class Ui_QueryForm(object):
     def setupUi(self, foam):
         if not foam.objectName():
             foam.setObjectName(u"foam")
