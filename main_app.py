@@ -1,9 +1,9 @@
 import sys
 from PySide6.QtWidgets import QApplication, QWidget
-from GP_ui import Ui_Form as Ui_MainForm
-from Query_ui import Ui_QueryForm  
-from setup_topup_ui import Ui_SetupTopupForm
-from setup_xtopup_ui import Ui_SetupXTopupForm
+from ui.GP_ui import Ui_Form as Ui_MainForm
+from ui.Query_ui import Ui_QueryForm  
+from ui.setup_topup_ui import Ui_SetupTopupForm
+from ui.setup_xtopup_ui import Ui_SetupXTopupForm
 
 class QueryWindow(QWidget):
     def __init__(self):
