@@ -5,6 +5,9 @@ __pycache__/
 *.pyd
 *.so
 
+ui/__pycache__/
+*.pyc
+
 # C extensions
 *.egg
 *.egg-info/
@@ -58,3 +61,4 @@ output/
 # System files
 Thumbs.db
 desktop.ini
+
