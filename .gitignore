@@ -4,8 +4,13 @@ __pycache__/
 *.pyo
 *.pyd
 *.so
+*.pyc
 
 ui/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
 *.pyc
 
 # C extensions
