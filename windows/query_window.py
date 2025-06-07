@@ -12,6 +12,7 @@ class QueryWindow(QWidget):
 
         self.ui.pushButton_3.clicked.connect(self.open_setup_xtopup_window)
         self.ui.pushButton_4.clicked.connect(self.open_setup_topup_window)
+        self.ui.pushButton_6.clicked.connect(self.close)
 
         self.topup_window = None
         self.xtopup_window = None
