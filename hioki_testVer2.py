@@ -14,7 +14,7 @@ def continuous_fetch(port='COM1', interval=0.5, csv_file='hioki_sample_dataset.c
             with open(csv_file, mode='a', newline='') as file:
                 writer = csv.writer(file)
                 if not file_exists:
-                    writer.writerow(['Timestamp', 'OCV', 'IR']) 
+                    writer.writerow(['Timestamp', 'OCV', 'RI']) 
 
                 while True:
                     ser.write(b':FETCh?\r\n')
@@ -28,10 +28,10 @@ def continuous_fetch(port='COM1', interval=0.5, csv_file='hioki_sample_dataset.c
                         parts = decoded.split(',')
                         if len(parts) == 2:
                             try:
-                                ocv = float(parts[0])
-                                ir = float(parts[1])
+                                ri = float(parts[0])
+                                ocv = float(parts[1])
                                 timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
-                                writer.writerow([timestamp, ocv, ir])
+                                writer.writerow([timestamp, ocv, ri])
                                 file.flush()  
                             except ValueError:
                                 print("Invalid numeric data received.")
