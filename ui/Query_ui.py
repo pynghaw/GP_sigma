@@ -19,12 +19,14 @@ from PySide6.QtWidgets import (QApplication, QDateEdit, QHBoxLayout, QHeaderView
     QLabel, QLineEdit, QPushButton, QSizePolicy,
     QTableWidget, QTableWidgetItem, QWidget)
 
-class Ui_QueryForm(object):
-    def setupUi(self, foam):
-        if not foam.objectName():
-            foam.setObjectName(u"foam")
-        foam.resize(1056, 591)
-        self.tableWidget = QTableWidget(foam)
+class Ui_form(object):
+    def setupUi(self, form):
+        if not form.objectName():
+            form.setObjectName(u"form")
+        form.resize(1050, 592)
+        form.setMinimumSize(QSize(1050, 592))
+        form.setMaximumSize(QSize(1050, 592))
+        self.tableWidget = QTableWidget(form)
         if (self.tableWidget.columnCount() < 7):
             self.tableWidget.setColumnCount(7)
         __qtablewidgetitem = QTableWidgetItem()
@@ -47,7 +49,7 @@ class Ui_QueryForm(object):
         self.tableWidget.horizontalHeader().setCascadingSectionResizes(True)
         self.tableWidget.horizontalHeader().setProperty(u"showSortIndicator", False)
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
-        self.horizontalLayoutWidget = QWidget(foam)
+        self.horizontalLayoutWidget = QWidget(form)
         self.horizontalLayoutWidget.setObjectName(u"horizontalLayoutWidget")
         self.horizontalLayoutWidget.setGeometry(QRect(10, 510, 631, 31))
         self.horizontalLayout = QHBoxLayout(self.horizontalLayoutWidget)
@@ -83,7 +85,7 @@ class Ui_QueryForm(object):
 
         self.horizontalLayout.addWidget(self.lineEdit_2)
 
-        self.horizontalLayoutWidget_2 = QWidget(foam)
+        self.horizontalLayoutWidget_2 = QWidget(form)
         self.horizontalLayoutWidget_2.setObjectName(u"horizontalLayoutWidget_2")
         self.horizontalLayoutWidget_2.setGeometry(QRect(820, 510, 221, 31))
         self.horizontalLayout_2 = QHBoxLayout(self.horizontalLayoutWidget_2)
@@ -99,7 +101,7 @@ class Ui_QueryForm(object):
 
         self.horizontalLayout_2.addWidget(self.pushButton_2)
 
-        self.horizontalLayoutWidget_3 = QWidget(foam)
+        self.horizontalLayoutWidget_3 = QWidget(form)
         self.horizontalLayoutWidget_3.setObjectName(u"horizontalLayoutWidget_3")
         self.horizontalLayoutWidget_3.setGeometry(QRect(10, 550, 291, 31))
         self.horizontalLayout_3 = QHBoxLayout(self.horizontalLayoutWidget_3)
@@ -115,7 +117,7 @@ class Ui_QueryForm(object):
 
         self.horizontalLayout_3.addWidget(self.pushButton_4)
 
-        self.horizontalLayoutWidget_4 = QWidget(foam)
+        self.horizontalLayoutWidget_4 = QWidget(form)
         self.horizontalLayoutWidget_4.setObjectName(u"horizontalLayoutWidget_4")
         self.horizontalLayoutWidget_4.setGeometry(QRect(629, 550, 411, 31))
         self.horizontalLayout_4 = QHBoxLayout(self.horizontalLayoutWidget_4)
@@ -137,36 +139,36 @@ class Ui_QueryForm(object):
         self.horizontalLayout_4.addWidget(self.pushButton_6)
 
 
-        self.retranslateUi(foam)
+        self.retranslateUi(form)
 
-        QMetaObject.connectSlotsByName(foam)
+        QMetaObject.connectSlotsByName(form)
     # setupUi
 
-    def retranslateUi(self, foam):
-        foam.setWindowTitle(QCoreApplication.translate("foam", u"Query", None))
+    def retranslateUi(self, form):
+        form.setWindowTitle(QCoreApplication.translate("form", u"Query", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("foam", u"Model", None));
+        ___qtablewidgetitem.setText(QCoreApplication.translate("form", u"Model", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("foam", u"Lot No.", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("form", u"Lot No.", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("foam", u"Quantity", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("form", u"Quantity", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("foam", u"Machine", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("form", u"Machine", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
-        ___qtablewidgetitem4.setText(QCoreApplication.translate("foam", u"Std. Deviation", None));
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("form", u"Std. Deviation", None));
         ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
-        ___qtablewidgetitem5.setText(QCoreApplication.translate("foam", u"Sigma", None));
+        ___qtablewidgetitem5.setText(QCoreApplication.translate("form", u"Sigma", None));
         ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
-        ___qtablewidgetitem6.setText(QCoreApplication.translate("foam", u"Sampling Date & Time", None));
-        self.label.setText(QCoreApplication.translate("foam", u"Date", None))
-        self.label_2.setText(QCoreApplication.translate("foam", u"Model", None))
-        self.label_3.setText(QCoreApplication.translate("foam", u"Lot No. ", None))
-        self.pushButton.setText(QCoreApplication.translate("foam", u"Search", None))
-        self.pushButton_2.setText(QCoreApplication.translate("foam", u"All", None))
-        self.pushButton_3.setText(QCoreApplication.translate("foam", u"Without Topup", None))
-        self.pushButton_4.setText(QCoreApplication.translate("foam", u"With Topup", None))
-        self.pushButton_7.setText(QCoreApplication.translate("foam", u"Extract", None))
-        self.pushButton_5.setText(QCoreApplication.translate("foam", u"Print", None))
-        self.pushButton_6.setText(QCoreApplication.translate("foam", u"Close", None))
+        ___qtablewidgetitem6.setText(QCoreApplication.translate("form", u"Sampling Date & Time", None));
+        self.label.setText(QCoreApplication.translate("form", u"Date", None))
+        self.label_2.setText(QCoreApplication.translate("form", u"Model", None))
+        self.label_3.setText(QCoreApplication.translate("form", u"Lot No. ", None))
+        self.pushButton.setText(QCoreApplication.translate("form", u"Search", None))
+        self.pushButton_2.setText(QCoreApplication.translate("form", u"All", None))
+        self.pushButton_3.setText(QCoreApplication.translate("form", u"Without Topup", None))
+        self.pushButton_4.setText(QCoreApplication.translate("form", u"With Topup", None))
+        self.pushButton_7.setText(QCoreApplication.translate("form", u"Extract", None))
+        self.pushButton_5.setText(QCoreApplication.translate("form", u"Print", None))
+        self.pushButton_6.setText(QCoreApplication.translate("form", u"Close", None))
     # retranslateUi
 

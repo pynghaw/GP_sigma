@@ -6,9 +6,21 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1060</width>
-    <height>798</height>
+    <width>1057</width>
+    <height>787</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1057</width>
+    <height>787</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1057</width>
+    <height>787</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Setup-without topup</string>
@@ -319,7 +331,7 @@
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>660</x>
+     <x>670</x>
      <y>740</y>
      <width>376</width>
      <height>41</height>

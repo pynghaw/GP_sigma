@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1057</width>
-    <height>866</height>
+    <width>1060</width>
+    <height>859</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,8 +18,14 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>0</width>
-    <height>0</height>
+    <width>1060</width>
+    <height>859</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1060</width>
+    <height>859</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -399,7 +405,7 @@
     <rect>
      <x>750</x>
      <y>630</y>
-     <width>81</width>
+     <width>91</width>
      <height>151</height>
     </rect>
    </property>
@@ -413,24 +419,27 @@
     <property name="spacing">
      <number>0</number>
     </property>
+    <item row="1" column="1">
+     <widget class="QLabel" name="label_18">
+      <property name="text">
+       <string>Deviation</string>
+      </property>
+     </widget>
+    </item>
     <item row="2" column="1">
      <widget class="QLabel" name="label_16">
       <property name="text">
-       <string>Min</string>
+       <string>Sigma</string>
       </property>
      </widget>
     </item>
     <item row="0" column="1">
      <widget class="QLabel" name="label_17">
       <property name="text">
-       <string>Max</string>
+       <string>Standard Deviation</string>
       </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QLabel" name="label_18">
-      <property name="text">
-       <string>Average</string>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </item>
@@ -445,7 +454,7 @@
      <height>191</height>
     </rect>
    </property>
-   <layout class="QGridLayout" name="gridLayout_8" rowstretch="0,0,0" columnstretch="0">
+   <layout class="QGridLayout" name="gridLayout_8" rowstretch="0,0,0,0" columnstretch="0">
     <property name="leftMargin">
      <number>0</number>
     </property>
@@ -455,21 +464,21 @@
     <property name="spacing">
      <number>0</number>
     </property>
-    <item row="1" column="0">
-     <widget class="QLineEdit" name="lineEdit_10">
-      <property name="readOnly">
-       <bool>true</bool>
-      </property>
-     </widget>
-    </item>
-    <item row="2" column="0">
+    <item row="3" column="0">
      <widget class="QLineEdit" name="lineEdit_11">
       <property name="readOnly">
        <bool>true</bool>
       </property>
      </widget>
     </item>
-    <item row="0" column="0">
+    <item row="2" column="0">
+     <widget class="QLineEdit" name="lineEdit_10">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
      <widget class="QLineEdit" name="lineEdit_12">
       <property name="readOnly">
        <bool>true</bool>
@@ -505,7 +514,7 @@
     <item>
      <widget class="QPushButton" name="pushButton_5">
       <property name="text">
-       <string>Re-do</string>
+       <string>Reset</string>
       </property>
      </widget>
     </item>
@@ -535,7 +544,7 @@
   <widget class="QLCDNumber" name="lcdNumber">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>30</x>
      <y>40</y>
      <width>251</width>
      <height>111</height>
@@ -551,7 +560,7 @@
   <widget class="QLabel" name="label_19">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>290</x>
      <y>100</y>
      <width>111</width>
      <height>61</height>
@@ -569,7 +578,7 @@
   <widget class="QLCDNumber" name="lcdNumber_2">
    <property name="geometry">
     <rect>
-     <x>20</x>
+     <x>30</x>
      <y>170</y>
      <width>251</width>
      <height>111</height>
@@ -582,7 +591,7 @@
   <widget class="QLabel" name="label_20">
    <property name="geometry">
     <rect>
-     <x>280</x>
+     <x>290</x>
      <y>230</y>
      <width>111</width>
      <height>61</height>
@@ -640,24 +649,24 @@
   <widget class="QWidget" name="gridLayoutWidget_10">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>300</y>
+     <x>260</x>
+     <y>290</y>
      <width>151</width>
-     <height>31</height>
+     <height>50</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout_10">
-    <item row="0" column="0">
-     <widget class="QLabel" name="label_23">
-      <property name="text">
-       <string>SAMPLE</string>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="1">
      <widget class="QLineEdit" name="lineEdit_14">
       <property name="readOnly">
        <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_23">
+      <property name="text">
+       <string>SAMPLE</string>
       </property>
      </widget>
     </item>
@@ -690,9 +699,12 @@
     <rect>
      <x>20</x>
      <y>410</y>
-     <width>361</width>
+     <width>391</width>
      <height>431</height>
     </rect>
+   </property>
+   <property name="lineWidth">
+    <number>20</number>
    </property>
    <column>
     <property name="text">
@@ -709,6 +721,54 @@
      <string>OCV</string>
     </property>
    </column>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget_12">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>340</y>
+     <width>151</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_12">
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_25">
+      <property name="text">
+       <string>OCV SPEC</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="lineEdit_15">
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>391</width>
+     <height>261</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="lineWidth">
+    <number>2</number>
+   </property>
+   <property name="midLineWidth">
+    <number>2</number>
+   </property>
   </widget>
  </widget>
  <resources/>

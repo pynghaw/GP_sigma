@@ -15,23 +15,24 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QGridLayout,
-    QHBoxLayout, QHeaderView, QLCDNumber, QLabel,
-    QLineEdit, QPlainTextEdit, QPushButton, QRadioButton,
-    QSizePolicy, QTableWidget, QTableWidgetItem, QTextBrowser,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFrame,
+    QGridLayout, QHBoxLayout, QHeaderView, QLCDNumber,
+    QLabel, QLineEdit, QPlainTextEdit, QPushButton,
+    QRadioButton, QSizePolicy, QTableWidget, QTableWidgetItem,
+    QTextBrowser, QVBoxLayout, QWidget)
 
 class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(1057, 866)
+        Form.resize(1060, 859)
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Fixed, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(Form.sizePolicy().hasHeightForWidth())
         Form.setSizePolicy(sizePolicy)
-        Form.setMinimumSize(QSize(0, 0))
+        Form.setMinimumSize(QSize(1060, 859))
+        Form.setMaximumSize(QSize(1060, 859))
         self.gridLayoutWidget = QWidget(Form)
         self.gridLayoutWidget.setObjectName(u"gridLayoutWidget")
         self.gridLayoutWidget.setGeometry(QRect(530, 10, 191, 221))
@@ -254,11 +255,16 @@ class Ui_Form(object):
 
         self.gridLayoutWidget_7 = QWidget(Form)
         self.gridLayoutWidget_7.setObjectName(u"gridLayoutWidget_7")
-        self.gridLayoutWidget_7.setGeometry(QRect(750, 630, 81, 151))
+        self.gridLayoutWidget_7.setGeometry(QRect(750, 630, 91, 151))
         self.gridLayout_7 = QGridLayout(self.gridLayoutWidget_7)
         self.gridLayout_7.setSpacing(0)
         self.gridLayout_7.setObjectName(u"gridLayout_7")
         self.gridLayout_7.setContentsMargins(0, 0, 0, 0)
+        self.label_18 = QLabel(self.gridLayoutWidget_7)
+        self.label_18.setObjectName(u"label_18")
+
+        self.gridLayout_7.addWidget(self.label_18, 1, 1, 1, 1)
+
         self.label_16 = QLabel(self.gridLayoutWidget_7)
         self.label_16.setObjectName(u"label_16")
 
@@ -266,13 +272,9 @@ class Ui_Form(object):
 
         self.label_17 = QLabel(self.gridLayoutWidget_7)
         self.label_17.setObjectName(u"label_17")
+        self.label_17.setWordWrap(True)
 
         self.gridLayout_7.addWidget(self.label_17, 0, 1, 1, 1)
-
-        self.label_18 = QLabel(self.gridLayoutWidget_7)
-        self.label_18.setObjectName(u"label_18")
-
-        self.gridLayout_7.addWidget(self.label_18, 1, 1, 1, 1)
 
         self.gridLayoutWidget_8 = QWidget(Form)
         self.gridLayoutWidget_8.setObjectName(u"gridLayoutWidget_8")
@@ -281,23 +283,23 @@ class Ui_Form(object):
         self.gridLayout_8.setSpacing(0)
         self.gridLayout_8.setObjectName(u"gridLayout_8")
         self.gridLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.lineEdit_10 = QLineEdit(self.gridLayoutWidget_8)
-        self.lineEdit_10.setObjectName(u"lineEdit_10")
-        self.lineEdit_10.setReadOnly(True)
-
-        self.gridLayout_8.addWidget(self.lineEdit_10, 1, 0, 1, 1)
-
         self.lineEdit_11 = QLineEdit(self.gridLayoutWidget_8)
         self.lineEdit_11.setObjectName(u"lineEdit_11")
         self.lineEdit_11.setReadOnly(True)
 
-        self.gridLayout_8.addWidget(self.lineEdit_11, 2, 0, 1, 1)
+        self.gridLayout_8.addWidget(self.lineEdit_11, 3, 0, 1, 1)
+
+        self.lineEdit_10 = QLineEdit(self.gridLayoutWidget_8)
+        self.lineEdit_10.setObjectName(u"lineEdit_10")
+        self.lineEdit_10.setReadOnly(True)
+
+        self.gridLayout_8.addWidget(self.lineEdit_10, 2, 0, 1, 1)
 
         self.lineEdit_12 = QLineEdit(self.gridLayoutWidget_8)
         self.lineEdit_12.setObjectName(u"lineEdit_12")
         self.lineEdit_12.setReadOnly(True)
 
-        self.gridLayout_8.addWidget(self.lineEdit_12, 0, 0, 1, 1)
+        self.gridLayout_8.addWidget(self.lineEdit_12, 1, 0, 1, 1)
 
         self.horizontalLayoutWidget_2 = QWidget(Form)
         self.horizontalLayoutWidget_2.setObjectName(u"horizontalLayoutWidget_2")
@@ -337,22 +339,22 @@ class Ui_Form(object):
 
         self.lcdNumber = QLCDNumber(Form)
         self.lcdNumber.setObjectName(u"lcdNumber")
-        self.lcdNumber.setGeometry(QRect(20, 40, 251, 111))
+        self.lcdNumber.setGeometry(QRect(30, 40, 251, 111))
         self.lcdNumber.setSmallDecimalPoint(True)
         self.lcdNumber.setProperty(u"intValue", 0)
         self.label_19 = QLabel(Form)
         self.label_19.setObjectName(u"label_19")
-        self.label_19.setGeometry(QRect(280, 100, 111, 61))
+        self.label_19.setGeometry(QRect(290, 100, 111, 61))
         font = QFont()
         font.setPointSize(30)
         self.label_19.setFont(font)
         self.lcdNumber_2 = QLCDNumber(Form)
         self.lcdNumber_2.setObjectName(u"lcdNumber_2")
-        self.lcdNumber_2.setGeometry(QRect(20, 170, 251, 111))
+        self.lcdNumber_2.setGeometry(QRect(30, 170, 251, 111))
         self.lcdNumber_2.setSmallDecimalPoint(True)
         self.label_20 = QLabel(Form)
         self.label_20.setObjectName(u"label_20")
-        self.label_20.setGeometry(QRect(280, 230, 111, 61))
+        self.label_20.setGeometry(QRect(290, 230, 111, 61))
         self.label_20.setFont(font)
         self.gridLayoutWidget_9 = QWidget(Form)
         self.gridLayoutWidget_9.setObjectName(u"gridLayoutWidget_9")
@@ -384,20 +386,20 @@ class Ui_Form(object):
 
         self.gridLayoutWidget_10 = QWidget(Form)
         self.gridLayoutWidget_10.setObjectName(u"gridLayoutWidget_10")
-        self.gridLayoutWidget_10.setGeometry(QRect(230, 300, 151, 31))
+        self.gridLayoutWidget_10.setGeometry(QRect(260, 290, 151, 50))
         self.gridLayout_10 = QGridLayout(self.gridLayoutWidget_10)
         self.gridLayout_10.setObjectName(u"gridLayout_10")
         self.gridLayout_10.setContentsMargins(0, 0, 0, 0)
-        self.label_23 = QLabel(self.gridLayoutWidget_10)
-        self.label_23.setObjectName(u"label_23")
-
-        self.gridLayout_10.addWidget(self.label_23, 0, 0, 1, 1)
-
         self.lineEdit_14 = QLineEdit(self.gridLayoutWidget_10)
         self.lineEdit_14.setObjectName(u"lineEdit_14")
         self.lineEdit_14.setReadOnly(True)
 
         self.gridLayout_10.addWidget(self.lineEdit_14, 0, 1, 1, 1)
+
+        self.label_23 = QLabel(self.gridLayoutWidget_10)
+        self.label_23.setObjectName(u"label_23")
+
+        self.gridLayout_10.addWidget(self.label_23, 0, 0, 1, 1)
 
         self.gridLayoutWidget_11 = QWidget(Form)
         self.gridLayoutWidget_11.setObjectName(u"gridLayoutWidget_11")
@@ -425,7 +427,32 @@ class Ui_Form(object):
         __qtablewidgetitem2 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(20, 410, 361, 431))
+        self.tableWidget.setGeometry(QRect(20, 410, 391, 431))
+        self.tableWidget.setLineWidth(20)
+        self.gridLayoutWidget_12 = QWidget(Form)
+        self.gridLayoutWidget_12.setObjectName(u"gridLayoutWidget_12")
+        self.gridLayoutWidget_12.setGeometry(QRect(260, 340, 151, 50))
+        self.gridLayout_12 = QGridLayout(self.gridLayoutWidget_12)
+        self.gridLayout_12.setObjectName(u"gridLayout_12")
+        self.gridLayout_12.setContentsMargins(0, 0, 0, 0)
+        self.label_25 = QLabel(self.gridLayoutWidget_12)
+        self.label_25.setObjectName(u"label_25")
+
+        self.gridLayout_12.addWidget(self.label_25, 1, 0, 1, 1)
+
+        self.lineEdit_15 = QLineEdit(self.gridLayoutWidget_12)
+        self.lineEdit_15.setObjectName(u"lineEdit_15")
+        self.lineEdit_15.setReadOnly(True)
+
+        self.gridLayout_12.addWidget(self.lineEdit_15, 1, 1, 1, 1)
+
+        self.frame = QFrame(Form)
+        self.frame.setObjectName(u"frame")
+        self.frame.setGeometry(QRect(20, 30, 391, 261))
+        self.frame.setFrameShape(QFrame.Panel)
+        self.frame.setFrameShadow(QFrame.Sunken)
+        self.frame.setLineWidth(2)
+        self.frame.setMidLineWidth(2)
 
         self.retranslateUi(Form)
 
@@ -450,12 +477,12 @@ class Ui_Form(object):
         self.label_13.setText(QCoreApplication.translate("Form", u"Min", None))
         self.label_14.setText(QCoreApplication.translate("Form", u"Max", None))
         self.label_15.setText(QCoreApplication.translate("Form", u"Average", None))
-        self.label_16.setText(QCoreApplication.translate("Form", u"Min", None))
-        self.label_17.setText(QCoreApplication.translate("Form", u"Max", None))
-        self.label_18.setText(QCoreApplication.translate("Form", u"Average", None))
+        self.label_18.setText(QCoreApplication.translate("Form", u"Deviation", None))
+        self.label_16.setText(QCoreApplication.translate("Form", u"Sigma", None))
+        self.label_17.setText(QCoreApplication.translate("Form", u"Standard Deviation", None))
         self.pushButton.setText(QCoreApplication.translate("Form", u"Start", None))
         self.pushButton_2.setText(QCoreApplication.translate("Form", u"Stop", None))
-        self.pushButton_5.setText(QCoreApplication.translate("Form", u"Re-do", None))
+        self.pushButton_5.setText(QCoreApplication.translate("Form", u"Reset", None))
         self.pushButton_4.setText(QCoreApplication.translate("Form", u"Save", None))
         self.pushButton_6.setText(QCoreApplication.translate("Form", u"Search", None))
         self.pushButton_3.setText(QCoreApplication.translate("Form", u"Setting", None))
@@ -471,5 +498,6 @@ class Ui_Form(object):
         ___qtablewidgetitem1.setText(QCoreApplication.translate("Form", u"RI", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("Form", u"OCV", None));
+        self.label_25.setText(QCoreApplication.translate("Form", u"OCV SPEC", None))
     # retranslateUi
 
