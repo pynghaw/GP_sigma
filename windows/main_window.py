@@ -1,5 +1,5 @@
 from PySide6.QtWidgets import QWidget, QTableWidgetItem
-from PySide6.QtCore import QThread  
+from PySide6.QtCore import QThread, QDate
 from db_connection import get_connection
 from ui.GP_ui import Ui_Form as Ui_MainForm
 from windows.query_window import QueryWindow
@@ -34,7 +34,18 @@ class MainWindow(QWidget):
         self.ui.lineEdit_6.setText("COM 1")
         self.ui.lineEdit_13.setText("9600")
         # lineEdit_ocv_spec
-        self.ui.lineEdit_14.setText("0")        
+        self.ui.lineEdit_14.setText("0")     
+        self.ui.lineEdit_2.setText("default resistance") #resistance              
+        
+        self.ui.lineEdit.setText("MA11") #quantity
+        self.ui.lineEdit_3.setText("lot") #lot
+        self.ui.lineEdit_4.setText("machine") #machine
+        self.ui.lineEdit_5.setText("name") #operator
+        
+        self.ui.dateEdit.setDate(QDate.currentDate())
+        self.ui.dateEdit_2.setDate(QDate.currentDate())
+        self.ui.dateEdit_3.setDate(QDate.currentDate())
+                   
      
         self.ui.pushButton_6.clicked.connect(self.open_query_window) # Search   
         
@@ -134,7 +145,6 @@ class MainWindow(QWidget):
             self.ui.lineEdit_12.setText(f"{std_dev:.4f}")  
             self.ui.lineEdit_10.setText(f"{deviation:.4f}")                 
             self.ui.lineEdit_11.setText(f"{new_ocv:.4f}")                                 
-
         
             
     def closeEvent(self, event):
