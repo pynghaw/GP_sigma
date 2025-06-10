@@ -61,7 +61,6 @@ output/
 
 # Data logs and serial output
 *.log
-*.csv
 
 # System files
 Thumbs.db

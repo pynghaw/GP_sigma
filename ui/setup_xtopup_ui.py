@@ -23,7 +23,9 @@ class Ui_SetupXTopupForm(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(1060, 798)
+        Form.resize(1057, 787)
+        Form.setMinimumSize(QSize(1057, 787))
+        Form.setMaximumSize(QSize(1057, 787))
         self.tableWidget = QTableWidget(Form)
         if (self.tableWidget.columnCount() < 10):
             self.tableWidget.setColumnCount(10)
@@ -245,7 +247,7 @@ class Ui_SetupXTopupForm(object):
 
         self.horizontalLayoutWidget = QWidget(Form)
         self.horizontalLayoutWidget.setObjectName(u"horizontalLayoutWidget")
-        self.horizontalLayoutWidget.setGeometry(QRect(660, 740, 376, 41))
+        self.horizontalLayoutWidget.setGeometry(QRect(670, 740, 376, 41))
         self.horizontalLayout = QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)

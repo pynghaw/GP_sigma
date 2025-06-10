@@ -4,7 +4,7 @@ from datetime import datetime
 from ui.GP_ui import Ui_Form as Ui_MainForm
 from PySide6.QtWidgets import QWidget, QTableWidgetItem
 
-def run_measure(stop_flag, main_window, input_csv='hioki_simulated_data.csv', interval=0.5):
+def run_measure(stop_flag, main_window, input_csv='hioki_sample_dataset.csv', interval=0.5):
     try:
         with open(input_csv, mode='r') as infile:
             reader = csv.DictReader(infile)

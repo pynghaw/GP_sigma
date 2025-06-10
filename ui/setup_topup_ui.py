@@ -23,7 +23,9 @@ class Ui_SetupTopupForm(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(1057, 774)
+        Form.resize(1056, 728)
+        Form.setMinimumSize(QSize(1056, 728))
+        Form.setMaximumSize(QSize(1056, 728))
         self.tableWidget = QTableWidget(Form)
         if (self.tableWidget.columnCount() < 5):
             self.tableWidget.setColumnCount(5)
@@ -38,7 +40,7 @@ class Ui_SetupTopupForm(object):
         __qtablewidgetitem4 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setGeometry(QRect(0, 10, 671, 711))
+        self.tableWidget.setGeometry(QRect(10, 10, 651, 701))
         self.tableWidget.setWordWrap(True)
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
         self.tableWidget.verticalHeader().setVisible(True)
@@ -46,7 +48,7 @@ class Ui_SetupTopupForm(object):
         self.tableWidget.verticalHeader().setStretchLastSection(True)
         self.verticalLayoutWidget = QWidget(Form)
         self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
-        self.verticalLayoutWidget.setGeometry(QRect(690, 20, 121, 301))
+        self.verticalLayoutWidget.setGeometry(QRect(670, 20, 121, 301))
         self.verticalLayout = QVBoxLayout(self.verticalLayoutWidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -77,7 +79,7 @@ class Ui_SetupTopupForm(object):
 
         self.verticalLayoutWidget_2 = QWidget(Form)
         self.verticalLayoutWidget_2.setObjectName(u"verticalLayoutWidget_2")
-        self.verticalLayoutWidget_2.setGeometry(QRect(830, 10, 211, 331))
+        self.verticalLayoutWidget_2.setGeometry(QRect(800, 10, 241, 331))
         self.verticalLayout_2 = QVBoxLayout(self.verticalLayoutWidget_2)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -113,7 +115,7 @@ class Ui_SetupTopupForm(object):
 
         self.horizontalLayoutWidget = QWidget(Form)
         self.horizontalLayoutWidget.setObjectName(u"horizontalLayoutWidget")
-        self.horizontalLayoutWidget.setGeometry(QRect(670, 730, 376, 41))
+        self.horizontalLayoutWidget.setGeometry(QRect(670, 680, 376, 41))
         self.horizontalLayout = QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
